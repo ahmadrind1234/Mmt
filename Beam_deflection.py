@@ -12,8 +12,9 @@ Second moment of area: m^4
 
 
 This code is suitable for a GitHub repository and can be extended for UI or web applications. """
-
-import numpy as np import matplotlib.pyplot as plt
+import streamlit as st
+import numpy as np
+import matplotlib.pyplot as plt 
 
 -----------------------------
 
