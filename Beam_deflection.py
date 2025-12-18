@@ -51,8 +51,17 @@ Using Double Integration Method
 
 -----------------------------
 
-EI * d^2y/dx^2 = M(x)
+# -----------------------------------
+# Deflection Calculation
+# Euler–Bernoulli Beam Theory
+# EI * (d^2y/dx^2) = M(x)
+# -----------------------------------
 
+dx = x[1] - x[0]
+
+d2y_dx2 = M / (E * I)
+dy_dx = np.cumsum(d2y_dx2) * dx
+y = np.cumsum(dy_dx) * dx 
 d2y_dx2 = M / (E * I)
 
 dy_dx = np.cumsum(d2y_dx2) * (x[1] - x[0]) y = np.cumsum(dy_dx) * (x[1] - x[0])
